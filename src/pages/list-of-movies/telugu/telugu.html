@@ -1,0 +1,18 @@
+<!-- Generated template for the TeluguComponent component -->
+<ion-content>
+
+  <ion-segment  [(ngModel)]="selectedSegment" (change)="segmentChanged()">
+      <ion-segment-button value="Telugu">
+ Telugu
+      </ion-segment-button>
+      <ion-segment-button value="Hindi">
+        Hindi
+      </ion-segment-button>
+      <ion-segment-button value="English">
+      English
+      </ion-segment-button>
+    </ion-segment>
+    <telugu-movies *ngIf="selectedSegment === 'Telugu' "></telugu-movies>
+    <hindi-movies *ngIf="selectedSegment === 'Hindi'"></hindi-movies>
+    <english-movies *ngIf="selectedSegment === 'English'"></english-movies>
+</ion-content>
