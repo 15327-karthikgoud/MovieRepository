@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
-import { TeluguComponent } from './telugu/telugu';
 import { TeluguMoviesComponent } from './telugu-movies/telugu-movies';
 import { HindiMoviesComponent } from './hindi-movies/hindi-movies';
 import { EnglishMoviesComponent } from './english-movies/english-movies';
 @NgModule({
-	declarations: [TeluguComponent,
+	declarations: [
     TeluguMoviesComponent,
     HindiMoviesComponent,
-    EnglishMoviesComponent],
+    EnglishMoviesComponent,
+  ],
 	imports: [],
-	exports: [TeluguComponent,
+	exports: [
     TeluguMoviesComponent,
     HindiMoviesComponent,
-    EnglishMoviesComponent]
+    EnglishMoviesComponent,
+    ]
 })
 export class ComponentsModule {}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MovieServiceProvider } from '../../shared/services/movie-service/movie-service';
 
 /**
  * Generated class for the TeluguMoviesComponent component.
@@ -8,15 +9,28 @@ import { Component } from '@angular/core';
  */
 @Component({
   selector: 'telugu-movies',
-  templateUrl: 'telugu-movies.html'
+  templateUrl: 'telugu-movies.html',
+
 })
 export class TeluguMoviesComponent {
-
+latestMovies:any[]=[];
   text: string;
 
-  constructor() {
+  constructor(public movieService : MovieServiceProvider) {
     console.log('Hello TeluguMoviesComponent Component');
     this.text = 'Hello World';
+  }
+  ngOnInit(){
+    this.movieService.teluguMoviesList().map((teluguMovies:any[])=>{
+      console.log(teluguMovies)
+      for (var i = teluguMovies.length - 1; i >= 0; i--)
+    this.latestMovies.push ({
+
+      "name" : teluguMovies[i].name,
+      "rating":teluguMovies[i].rating
+    })
+    console.log(this.latestMovies);
+    });
   }
 
 }

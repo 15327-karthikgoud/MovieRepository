@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MovieServiceProvider } from '../../../shared/services/movie-service/movie-service';
 
 /**
  * Generated class for the TeluguComponent component.
@@ -14,7 +15,9 @@ export class TeluguComponent {
 
   text: string;
 
-  constructor() {
+  constructor(
+    public movieService : MovieServiceProvider
+  ) {
     console.log('Hello TeluguComponent Component');
     
   }
