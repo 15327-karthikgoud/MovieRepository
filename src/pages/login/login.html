@@ -6,6 +6,7 @@
 -->
 <ion-content padding class="login-page">
   <div class=login-page>
+    <div class="login-allignment">
     <form [formGroup]="loginForm">
 
       <ion-label stacked>Username</ion-label>
@@ -15,6 +16,6 @@
       <p *ngIf = "!wrongDetails" style="color:red">invalid UserName/Password</p>
       <button ion-button (click)="onSubmit()" >Login</button>
     </form>
-
+  </div>
   </div>
 </ion-content>

@@ -27,7 +27,8 @@ latestMovies:any[]=[];
     this.latestMovies.push ({
 
       "name" : teluguMovies[i].name,
-      "rating":teluguMovies[i].rating
+      "rating":teluguMovies[i].rating,
+      "image":teluguMovies[i].image
     })
     console.log(this.latestMovies);
     });

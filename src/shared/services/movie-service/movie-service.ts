@@ -17,9 +17,9 @@ export class MovieServiceProvider {
     let recentMovies : any[] = []
   recentMovies.push([
     {
-    "name":"Bahubali","rating":"90"},
-    {"name":"Chtrapathi","rating":"80"}
-    ,{"name":"Mirchi","rating":"70"}]
+    "name":"Baahubali","rating":"90","image":"./assets/imgs/baahubali.jpg"},
+    {"name":"Chatrapathi","rating":"80","image":"./assets/imgs/chatrapathi.jpg"}
+    ,{"name":"Mirchi","rating":"70","image":"./assets/imgs/mirchi.jpg"}]
   )
     return recentMovies;
   }

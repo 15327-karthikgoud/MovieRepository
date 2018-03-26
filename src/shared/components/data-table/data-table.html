@@ -1,9 +1,15 @@
 <!-- Generated template for the DataTableComponent component -->
-<ion-content>
-  <table>
-    <tr *ngFor="let row of movieList">
-      <td>{{row}}</td>
-      <!-- <td>{{row.rating}}</td> -->
-    </tr>
-  </table>
-</ion-content>
+
+  <div *ngFor="let row of data" (click)="movieClicked(row)">
+
+    <!-- <ul *ngFor="let row of data" (click)="movieClicked(row)">
+      <li>{{row.name}}</li>
+      <li>{{row.rating}}</li>
+      <li>
+        <img [src]="row.image" alt="img-missing">
+      </li>
+     <td>{{row.rating}}</td> 
+    </ul>  -->
+    <img [src]="row.image" alt="img-missing">
+</div>
+ 
